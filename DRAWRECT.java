@@ -1,4 +1,4 @@
-package _180726;
+// RTE(Nonzero Return Code)
 
 import java.util.Scanner;
 
