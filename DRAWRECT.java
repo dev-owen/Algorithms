@@ -1,5 +1,6 @@
-// RTE(Nonzero Return Code)
-
+*
+*
+*
 import java.util.Scanner;
 
 public class DRAWRECT {
