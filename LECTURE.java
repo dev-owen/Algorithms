@@ -1,5 +1,6 @@
-// RTE (nonzero return code)
-
+*
+*
+*
 import java.util.Scanner;
 
 public class LECTURE {
