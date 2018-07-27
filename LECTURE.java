@@ -27,7 +27,7 @@ public class LECTURE {
 			}
 		}
 		for(int i=0; i<arr.length-1;i++) {
-			ans += arr[i]+" ";
+			ans += arr[i];
 		}
 		ans += arr[arr.length-1];
 		return ans;
