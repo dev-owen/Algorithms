@@ -1,6 +1,5 @@
-package _180727;
+// RTE (nonzero return code)
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LECTURE {
