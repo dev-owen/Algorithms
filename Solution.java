@@ -1,3 +1,8 @@
+*
+*
+*
+*
+// n 개의 최소공배수 (Programmers, Level 2)
 package _180731;
 
 public class Solution {
