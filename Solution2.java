@@ -1,6 +1,9 @@
-package _180731;
-
-public class sol {
+*
+*
+*
+*
+// 2 x n 타일링 (Programmers, level 3)
+public class Solution2 {
 	
 	static long dp[] = new long[60000];
 	public static int solution(int n) {
