@@ -6,7 +6,7 @@
 import java.util.*;
 import java.io.*;
  
-public class Main {
+public class BS {
     private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
  
     public static void main(String args[]) throws IOException {
