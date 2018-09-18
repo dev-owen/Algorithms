@@ -28,62 +28,64 @@ public class BOJ_14503 {
 	
 	static void go(int posVer, int posHor, int dir) {
 		boolean[] checked = new boolean[4];
-			area[posVer][posHor] = 2; // 0ÏùÄ Ï≤≠ÏÜå X, 1ÏùÄ Î≤Ω, 2Îäî Ï≤≠ÏÜå O
-			count++;
-		
+		if(area[posVer][posHor] == 0) {
+			area[posVer][posHor] = 2; // 0¿∫ √ªº“ X, 1¿∫ ∫Æ, 2¥¬ √ªº“ O
+			count++;			
+		}
+		int checkDir =dir;
 		while(true) {
-			if(!checked[0]) {
-				if(dir == 0 && area[posVer][posHor-1] == 0) {
-					go(posVer,posHor-1,dir);
+			if(checkDir == 0) {
+				if(!checked[0] && area[posVer][posHor-1] == 0) {
+					go(posVer,posHor-1,1);
 					return;
 				} else {
 					checked[0] = true;
-					dir = 1;
+					checkDir = 1;
 				}
 			}
-			if(!checked[1]) {
-				if(dir == 1 && area[posVer+1][posHor] == 0) {
-					go(posVer+1,posHor,dir);
+			if(checkDir == 1) {
+				if(!checked[1] && area[posVer+1][posHor] == 0) {
+					go(posVer+1,posHor,2);
 					return;
 				} else {
 					checked[1] = true;
-					dir = 2;
+					checkDir = 2;
 				}
 			}
-			if(!checked[2]) {
-				 if(dir == 2 && area[posVer][posHor+1] == 0) {
-					 go(posVer,posHor+1,dir);
+			if(checkDir == 2) {
+				 if(!checked[2] && area[posVer][posHor+1] == 0) {
+					 go(posVer,posHor+1,3);
 					 return;
 				 } else {
 					 checked[2] = true;
-					 dir = 3;
+					 checkDir = 3;
 				 }
 			}
-			if(!checked[3]) {
-				if(dir == 3 && area[posVer-1][posHor] == 0) {
-					go(posVer-1,posHor,dir);
+			if(checkDir == 3) {
+				if(!checked[3]&& area[posVer-1][posHor] == 0) {
+					go(posVer-1,posHor,0);
 					return;
 				} else {
 					checked[3] = true;
-					dir = 0;
+					checkDir = 0;
 				}
 			}
 			if(checked[0]&&checked[1]&&checked[2]&&checked[3]) break;
 		}
 		if(dir == 0 && area[posVer+1][posHor] != 1) {
-			go(posVer+1,posHor,dir);
+			go(posVer+1,posHor,0);
 			return;
 		}
 		if(dir == 1 && area[posVer][posHor+1] != 1) {
-			go(posVer,posHor+1,dir);
+			go(posVer,posHor+1,1);
 			return;
 		}
 		if(dir == 2 && area[posVer-1][posHor] != 1) {
-			go(posVer-1,posHor,dir);
+			go(posVer-1,posHor,2);
 			return;
 		}
 		if(dir == 3 && area[posVer][posHor-1] != 1) {
-			go(posVer,posHor-1,dir);
+			go(posVer,posHor-1,3);
 			return;
 		}
 		return;
