@@ -33,7 +33,7 @@ public class BOJ_14503 {
 		}
 		int checkDir =dir;
 		while(true) {
-			if(checkDir == 0) {
+			if(checkDir == 0) { // 북
 				if(!checked[3] && area[posVer][posHor-1] == 0) {
 					go(posVer,posHor-1,3);
 					return;
@@ -42,7 +42,7 @@ public class BOJ_14503 {
 					checkDir = 3;
 				}
 			}
-			if(checkDir == 3) {
+			if(checkDir == 3) { // 서
 				if(!checked[2] && area[posVer+1][posHor] == 0) {
 					go(posVer+1,posHor,2);
 					return;
@@ -51,7 +51,7 @@ public class BOJ_14503 {
 					checkDir = 2;
 				}
 			}
-			if(checkDir == 2) {
+			if(checkDir == 2) { // 남
 				 if(!checked[1] && area[posVer][posHor+1] == 0) {
 					 go(posVer,posHor+1,1);
 					 return;
@@ -60,7 +60,7 @@ public class BOJ_14503 {
 					 checkDir = 1;
 				 }
 			}
-			if(checkDir == 1) {
+			if(checkDir == 1) { // 동
 				if(!checked[0]&& area[posVer-1][posHor] == 0) {
 					go(posVer-1,posHor,0);
 					return;
