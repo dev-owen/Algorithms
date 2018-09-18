@@ -23,50 +23,49 @@ public class BOJ_14503 {
 		}
 		count = 0;
 		go(startPosVer, startPosHor, startDir);
-		System.out.println(count);
 	}
 	
 	static void go(int posVer, int posHor, int dir) {
 		boolean[] checked = new boolean[4];
 		if(area[posVer][posHor] == 0) {
-			area[posVer][posHor] = 2; // 0Àº Ã»¼Ò X, 1Àº º®, 2´Â Ã»¼Ò O
+			area[posVer][posHor] = 2; // 0 : ì²­ì†Œ X, 1 : ë²½, 2: ì²­ì†Œ : O
 			count++;			
 		}
 		int checkDir =dir;
 		while(true) {
 			if(checkDir == 0) {
-				if(!checked[0] && area[posVer][posHor-1] == 0) {
-					go(posVer,posHor-1,1);
+				if(!checked[3] && area[posVer][posHor-1] == 0) {
+					go(posVer,posHor-1,3);
 					return;
 				} else {
-					checked[0] = true;
-					checkDir = 1;
+					checked[3] = true;
+					checkDir = 3;
 				}
 			}
-			if(checkDir == 1) {
-				if(!checked[1] && area[posVer+1][posHor] == 0) {
+			if(checkDir == 3) {
+				if(!checked[2] && area[posVer+1][posHor] == 0) {
 					go(posVer+1,posHor,2);
 					return;
 				} else {
-					checked[1] = true;
+					checked[2] = true;
 					checkDir = 2;
 				}
 			}
 			if(checkDir == 2) {
-				 if(!checked[2] && area[posVer][posHor+1] == 0) {
-					 go(posVer,posHor+1,3);
+				 if(!checked[1] && area[posVer][posHor+1] == 0) {
+					 go(posVer,posHor+1,1);
 					 return;
 				 } else {
-					 checked[2] = true;
-					 checkDir = 3;
+					 checked[1] = true;
+					 checkDir = 1;
 				 }
 			}
-			if(checkDir == 3) {
-				if(!checked[3]&& area[posVer-1][posHor] == 0) {
+			if(checkDir == 1) {
+				if(!checked[0]&& area[posVer-1][posHor] == 0) {
 					go(posVer-1,posHor,0);
 					return;
 				} else {
-					checked[3] = true;
+					checked[0] = true;
 					checkDir = 0;
 				}
 			}
@@ -76,18 +75,18 @@ public class BOJ_14503 {
 			go(posVer+1,posHor,0);
 			return;
 		}
-		if(dir == 1 && area[posVer][posHor+1] != 1) {
-			go(posVer,posHor+1,1);
+		if(dir == 3 && area[posVer][posHor+1] != 1) {
+			go(posVer,posHor+1,3);
 			return;
 		}
 		if(dir == 2 && area[posVer-1][posHor] != 1) {
 			go(posVer-1,posHor,2);
 			return;
 		}
-		if(dir == 3 && area[posVer][posHor-1] != 1) {
-			go(posVer,posHor-1,3);
+		if(dir == 1 && area[posVer][posHor-1] != 1) {
+			go(posVer,posHor-1,1);
 			return;
 		}
-		return;
+		System.out.println(count);
 	}
 }
