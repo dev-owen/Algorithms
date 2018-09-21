@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 public class BOJ_5557 {
     static int N;
     static int[] ar;
-    static long[][] dp;
+    static long[][] dp; // dp[i][j]는 첫 번째 숫자부터 (i-1)번째 숫자까지 더했을 때 그 값이 j가 나오는 방법수
     public static void main(String[] args) throws Exception {
         // TODO Auto-generated method stub
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
