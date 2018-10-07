@@ -3,7 +3,7 @@ package kakao;
 import java.io.*;
 import java.util.*;
 
-public class Solution1 {
+public class kakao2018_1 {
 	public String[] solution(String[] record) {
 		List<String[]> list = new LinkedList<>();
 		Map<String, String> hashMap = new HashMap<>();
