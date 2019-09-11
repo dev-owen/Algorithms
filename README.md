@@ -30,11 +30,13 @@
   -  1780 : 종이의 갯수
 
   -  6549 : 히스토그램에서 가장 큰 정사각형
+  
       - Segment Tree
 
 #### Union-find
 
   -  1717 : 집합의 표현
+  
       - Disjoint-set
       
 ### 다이나믹 프로그래밍(Dynamic Programming)
