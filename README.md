@@ -50,6 +50,16 @@
   - 1939 : 중량 제한
       
       - BFS 
+      
+### 완전 탐색(Brute Force Search)
+
+  - 1722 : 순열의 순회
+  
+      - Permutation
+  
+  - 10971 : 외판원 순회 2
+  
+      - DFS
     
 ### 다이나믹 프로그래밍(Dynamic Programming)
 
