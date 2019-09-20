@@ -25,7 +25,13 @@
 
   -  3015 : 오아시스 재결합
 
-#### 분할정복(Divide & Conquer)
+#### Union-find
+
+  -  1717 : 집합의 표현
+  
+      - Disjoint-set
+     
+### 분할정복(Divide & Conquer)
 
   -  1780 : 종이의 갯수
   
@@ -36,13 +42,15 @@
   -  6549 : 히스토그램에서 가장 큰 정사각형
   
       - Segment Tree
-
-#### Union-find
-
-  -  1717 : 집합의 표현
-  
-      - Disjoint-set
       
+### 이분 탐색(Binary Search)
+  
+  - 1561 : 놀이공원
+  
+  - 1939 : 중량 제한
+      
+      - BFS 
+    
 ### 다이나믹 프로그래밍(Dynamic Programming)
 
   -  1890 : 점프
